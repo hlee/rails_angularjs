@@ -7,10 +7,12 @@
   </form> 
 
   {{newEntry.name}}
-<ul>
-  <li ng-repeat='entry in entries'>
-    {{entry.name}}
-  </li>
-</ul>
+  <ul>
+    <li ng-repeat='entry in entries'>
+      {{entry.name}}
+      <span ng-show='entry.winner' class='winner'>WINNER</span>
+    </li>
+  </ul>
+  <button ng-click='drawWinner()'>Draw Winner</button>
 </div>
 
