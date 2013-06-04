@@ -1,4 +1,7 @@
 Raffler::Application.routes.draw do
+  resources :entries
+
+
   get "raffle/index"
 
   root to: 'raffle#index'
