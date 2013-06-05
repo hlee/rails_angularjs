@@ -2,8 +2,13 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 app = angular.module('Raffler', ['ngResource'])
-@RaffleCtrl = ($scope, $resource) ->
-  Entry = $resource('/entries/:id', {id: '@id'}, {update: {method: 'PUT'}})
+app.factory "Entry", ["$resource", ($resource) ->
+  $resource("/entries/:id", {id: '@id'}, {update: {method: 'PUT'}})
+]
+
+#@RaffleCtrl = ($scope, $resource) ->
+  #Entry = $resource('/entries/:id', {id: '@id'}, {update: {method: 'PUT'}})
+@RaffleCtrl = ['$scope', 'Entry', ($scope, Entry) -> 
   $scope.entries = Entry.query()
   #$scope.entries = [
     #{name: 'Larry'}
@@ -24,6 +29,7 @@ app = angular.module('Raffler', ['ngResource'])
       entry.winner = true
       entry.$update()
       $scope.lastWinner = entry
+]
     #entry = $scope.entries[Math.floor(Math.random() * $scope.entries.length)]
     #entry.winner = true
     #$scope.lastWinner = entry
