@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  respond_to :json
+  respond_to :json, except: [:todo]
  
   def index
     respond_with Entry.all
@@ -19,5 +19,9 @@ class EntriesController < ApplicationController
 
   def destroy
     respond_with Entry.destroy(params[:id])
+  end
+  
+  def todo
+    render layout: false
   end
 end
