@@ -1,5 +1,7 @@
 Raffler::Application.routes.draw do
-  resources :entries
+  resources :entries do
+    get :todo, on: :collection
+  end
 
 
   get "raffle/index"
