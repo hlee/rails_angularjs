@@ -2,6 +2,7 @@ Raffler::Application.routes.draw do
   resources :entries do
     get :todo, on: :collection
     get :project, on: :collection
+    get :book, on: :collection
   end
 
 
