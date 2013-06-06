@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  respond_to :json, except: [:todo]
+  respond_to :json, except: [:todo, :project]
  
   def index
     respond_with Entry.all
@@ -22,6 +22,10 @@ class EntriesController < ApplicationController
   end
   
   def todo
+    render layout: false
+  end
+
+  def project
     render layout: false
   end
 end
