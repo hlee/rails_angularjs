@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  respond_to :json, except: [:todo, :project, :book]
+  respond_to :json, except: [:todo, :project, :book_list]
  
   def index
     respond_with Entry.all
@@ -26,6 +26,10 @@ class EntriesController < ApplicationController
   end
 
   def project
+    render layout: false
+  end
+
+  def book_list
     render layout: false
   end
 end
