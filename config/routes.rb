@@ -7,6 +7,7 @@ Raffler::Application.routes.draw do
 
 
   get "raffle/index"
+  get "raffle/reset_winner"
 
   root to: 'raffle#index'
   # The priority is based upon order of creation:
