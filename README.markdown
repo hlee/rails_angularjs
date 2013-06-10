@@ -13,6 +13,11 @@ http://ug-rails.herokuapp.com/book/index.html
 
 ## change log
 
+06/10/2013 Monday<br/>
+
+Since my dear friend found one more bug as blow, I did monkey fix again
+![bug_of_reset](https://f.cloud.github.com/assets/83296/631769/7dd91f38-d1d2-11e2-81ee-c5c82d0fcd63.png)
+
 06/07/2013 Friday<br/>
 added one more module of books
 
