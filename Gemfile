@@ -7,6 +7,11 @@ gem 'rails', '3.2.12'
 
 gem 'sqlite3', group: [:development, :test]
 gem 'pg', group: :production
+gem 'slim-rails'
+
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
 
 
 # Gems used only for assets and not required
