@@ -4,6 +4,6 @@ class RaffleController < ApplicationController
 
   def reset_winner
     Entry.update_all(winner: false)
-    redirect_to root_url 
+    redirect_to raffle_index_path
   end
 end
