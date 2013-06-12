@@ -9,5 +9,14 @@
       <input ng-model='greeting.text'>
       <p> {{greeting.text}}, World</p>
     </div>
+    <div ng-controller='OtherController'>
+      <input ng-model='sometext'>
+      <p> {{sometext}}</p>
+    </div>
+    <script>
+      function OtherController($scope) {
+        $scope.someText = 'You have started your journey.';
+      }
+    </script>
   </body>
 </html>
