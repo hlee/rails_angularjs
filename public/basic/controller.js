@@ -16,7 +16,7 @@ function CartController($scope) {
 
 function DeathrayMenuController($scope) {
     $scope.menu = {text: 'Stun'};
-    $scope.menuState.show = false;
+    $scope.menuState = {show: false};
     $scope.toggleMenu = function() {
         $scope.menuState.show = !$scope.menuState.show;
     };

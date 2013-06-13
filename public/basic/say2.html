@@ -1,0 +1,34 @@
+<html ng-app>
+  <head>
+    <script src='angular.js'></script>
+    <script src='controller1.js'></script>
+  <head>
+
+  <body>
+    <div ng-controller='SayController'>
+      <input ng-model='greeting.text'>
+      <p> {{greeting.text}}, World</p>
+    </div>
+
+
+    <div ng-controller='DeathController'>
+      <button ng-click='toggleMenu()'>Toggle Menu</button>
+      <ul ng-show='menuState.show'>
+        <li ng-click='stun()'>{{menu.text}}</li>
+        <li ng-click='disintegrate()'>Disintegrate</li>
+        <li ng-click='erase()'>Erase from history</li>
+      </ul>
+    <div/>
+
+    <script>
+        function DeathController($scope) {
+          $scope.menu = { text: 'Stun'}
+          $scope.menuState = {show: false}
+          //$scope.menuState.show = false;
+          $scope.toggleMenu = function() {
+            $scope.menuState.show = !$scope.menuState.show;
+          };
+        }
+    </script>
+  </body>
+</html>
