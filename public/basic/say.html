@@ -1,18 +1,21 @@
 <html ng-app>
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-    <!--<script src='angular.js'></script>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>-->
+    <script src='angular.js'></script>
     <script src='controller.js'></script>
   <head>
+
   <body>
     <div ng-controller='SayController'>
       <input ng-model='greeting.text'>
       <p> {{greeting.text}}, World</p>
     </div>
+
     <div ng-controller='OtherController'>
       <input ng-model='sometext'>
       <p> {{sometext}}</p>
     </div>
+
     <div ng-controller='StudentListController'>
         <ul> 
             <li ng-repeat='student in students'>
@@ -21,19 +24,32 @@
         </ul>
         <button ng-click="insertTom()">Insert</button>
     </div>
+
+<div ng-controller='DeathrayMenuController'>
+<button ng-click='toggleMenu()'>Toggle Menu</button>
+<ul ng-show='menuState.show'>
+<li ng-click='stun()'>{{menu.text}}</li>
+<li ng-click='disintegrate()'>Disintegrate</li>
+<li ng-click='erase()'>Erase from history</li>
+</ul>
+<div/>
+
     <script>
       var students = [{name:'Mary Contrary', id:'1'},
         {name:'Jack Sprat', id:'2'},
         {name:'Jill Hill', id:'3'}];
+
       function StudentListController($scope) {
         $scope.students = students;
         $scope.insertTom = function () {
           $scope.students.splice(1, 0, {name:'Tom Thumb', id:'4'});
         };
       }
+
       function OtherController($scope) {
         $scope.someText = 'You have started your journey.';
       }
+
     </script>
   </body>
 </html>
