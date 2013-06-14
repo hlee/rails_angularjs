@@ -21,6 +21,11 @@
       <input ng-model='greeting.text'>
       <p> {{greeting.text}}, World</p>
     </div>
+    <div ng-controller='HeaderController'>
+      <div ng-class='{error: isError, warning: isWarning}'>{{messageText}}</div>
+      <button ng-click='showError()'>Simulate Error</button>
+      <button ng-click='showWarning()'>Simulate Warning</button>
+    </div>
 
 
     <div ng-controller='DeathController'>
@@ -33,6 +38,21 @@
     <div/>
 
     <script>
+        function HeaderController($scope) {
+          $scope.isError = false;
+          $scope.isWarning = false;
+          $scope.showError = function() {
+            $scope.messageText = 'This is an error';
+            $scope.isError = true;
+            $scope.isWarning = false;
+          };
+          
+          $scope.showWarning = function() {
+            $scope.messageText = 'Just a warning, Please carry on';
+            $scope.isWarning = true;
+            $scope.isError = false;
+          };
+        }
         function DeathController($scope) {
           $scope.isDisabled = false;
           $scope.menu = { text: 'Stun'}
