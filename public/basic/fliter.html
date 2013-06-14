@@ -1,0 +1,29 @@
+<html ng-app>
+  <head>
+    <script src='angular.js'></script>
+    <!--<script src='controller1.js'></script>-->
+    <!--link rel='stylesheet' type='text/css' href='mystyles.css' media='screen' /-->
+    <style media='screen' type='text/css'>
+    </style>
+  <head>
+
+    <body ng-app='HomeModule' ng-controller="HomeController">
+      <h1>{{pageHeading | titleCase}}</h1>
+      <script>
+        var homeModule = angular.module('HomeModule', []);
+        homeModule.filter('titleCase', function() {
+          var titleCaseFilter = function(input) {
+            var words = input.split(' ');
+            for (var i = 0; i < words.length; i++) {
+              words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+            }
+            return words.join(' ');
+          };
+          return titleCaseFilter;
+        });
+        function HomeController($scope) {
+          $scope.pageHeading = 'behold the majesty of your page title';
+        }
+      </script>
+    </body>
+</html>
