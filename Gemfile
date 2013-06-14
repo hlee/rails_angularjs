@@ -5,9 +5,12 @@ gem 'rails', '3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3', group: [:development, :test]
 gem 'pg', group: :production
 gem 'slim-rails'
+group :test, :development do
+  gem 'jasmine-rails'
+  gem 'sqlite3'
+end
 
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
