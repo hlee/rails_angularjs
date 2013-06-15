@@ -1,0 +1,27 @@
+<html ng-app>
+  <head>
+    <script src='../angular.js'></script>
+    <!--<script src='controller1.js'></script>-->
+    <!--link rel='stylesheet' type='text/css' href='mystyles.css' media='screen' /-->
+    <style media='screen' type='text/css'>
+    </style>
+    <head>
+
+      <body>
+        <h1>Shop!</h1>
+        <table ng-controller='ShoppingController'>
+          <tr ng-repeat="item in items">
+            <td>{{item.title}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.price | currency}}</td>
+          </tr>
+        </table>
+        <script>
+          function ShoppingController($scope, $http) {
+            $http.get('/products').success(function(data, status, headers, config) {
+              $scope.items = data;
+            });
+          }
+    </script>
+  </body>
+</html>
