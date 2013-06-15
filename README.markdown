@@ -11,6 +11,9 @@ http://ug-rails.herokuapp.com
 book list <br/>
 http://ug-rails.herokuapp.com/book/index.html
 
+email client <br/>
+http://ug-rails.herokuapp.com/email/index.html
+
 ## change log
 
 06/10/2013 Monday<br/>
