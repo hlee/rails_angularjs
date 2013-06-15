@@ -10,6 +10,7 @@ Raffler::Application.routes.draw do
   get "raffle/reset_winner"
 
   root to: 'home#index'
+  match 'products' => 'home#show_products', via: :get
   mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
   # The priority is based upon order of creation:
   # first created -> highest priority.
