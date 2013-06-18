@@ -5,7 +5,7 @@ var services = angular.module('guthub.services',
 
 services.factory('Recipe', ['$resource',
     function($resource) {
-  return $resource('/recipes/:id', {id: '@id'});
+  return $resource('/recipes/:id.json', {id: '@id'});
 }]);
 
 services.factory('MultiRecipeLoader', ['Recipe', '$q',
