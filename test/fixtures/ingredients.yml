@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  amount: 1
+  amount_units: MyString
+  ingredient_name: MyString
+
+two:
+  amount: 1
+  amount_units: MyString
+  ingredient_name: MyString
