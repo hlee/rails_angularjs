@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html   lang="en" ng-app="guthub">
+<head>
+  <title>GutHub - Create and Share</title>
+  <script src="/sample4.1/scripts/vendor/angular.min.js"></script>
+  <script src="/sample4.1/scripts/vendor/angular-resource.min.js"></script>
+  <script src="/sample4.1/scripts/directives/directives.js"></script>
+  <script src="/sample4.1/scripts/services/services.js"></script>
+  <script src="/sample4.1/scripts/controllers/controllers.js"></script>
+  <link href="/sample4.1/styles/bootstrap.css" rel="stylesheet">
+  <link href="/sample4.1/styles/guthub.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>GutHub</h1>
+  </header>
+
+  <div butterbar>Loading...</div>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span2">
+        <!--Sidebar-->
+        <div id="focus"><a href="/#/new">New Recipe</a></div>
+        <div><a href="/#/">Recipe List</a></div>
+
+      </div>
+      <div class="span10">
+        <div ng-view></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
