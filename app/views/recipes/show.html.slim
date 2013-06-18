@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @recipe.title
+p
+  strong Description:
+  = @recipe.description
+p
+  strong Instructions:
+  = @recipe.instructions
+
+= link_to 'Edit', edit_recipe_path(@recipe)
+'|
+= link_to 'Back', recipes_path

@@ -1,4 +1,7 @@
 Raffler::Application.routes.draw do
+  resources :recipes
+
+
   resources :entries do
     get :todo, on: :collection
     get :project, on: :collection
