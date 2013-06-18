@@ -17,6 +17,7 @@ Raffler::Application.routes.draw do
 
   root to: 'home#index'
   match 'query_products' => 'home#show_products', via: :get
+  match 'feed/yahoo.rss' => 'home#index', via: [:get, :post]
   mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
   # The priority is based upon order of creation:
   # first created -> highest priority.
