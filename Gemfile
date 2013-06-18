@@ -10,6 +10,7 @@ gem 'slim-rails'
 group :test, :development do
   gem 'jasmine-rails'
   gem 'sqlite3'
+  gem 'rspec-rails'
 end
 
 gem "therubyracer"
