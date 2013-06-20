@@ -15,3 +15,6 @@
 //= require angular
 //= require angular-resource
 //= require_tree .
+$(window).load(function(){
+  $('img').lazyload();
+});
