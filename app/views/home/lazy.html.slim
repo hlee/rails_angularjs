@@ -1,4 +1,7 @@
 h2 demo of how to lazy load 
 
 
-= image_tag 'divine1.jpg'
+-# images = Dir[File.dirname(__FILE__) + '']
+- images = Dir[Rails.root.join('app', 'assets', 'images', '*.jpg')]
+- images.each do |image|
+  = image_tag File.basename(image), width: '900'
