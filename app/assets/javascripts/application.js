@@ -16,5 +16,7 @@
 //= require angular-resource
 //= require_tree .
 $(window).load(function(){
-  $('img').lazyload();
+  $('img').lazyload({
+    effect : "fadeIn"
+  });
 });
