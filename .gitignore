@@ -15,3 +15,5 @@
 /tmp
 /spec/tmp
 tags
+
+.DS_Store
