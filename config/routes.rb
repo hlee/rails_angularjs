@@ -16,6 +16,7 @@ Raffler::Application.routes.draw do
   get "raffle/reset_winner"
 
   root to: 'home#index'
+  match 'lazy_demo' => 'home#lazy', via: :get
   match 'query_products' => 'home#show_products', via: :get
   match 'feed/yahoo.rss' => 'home#index', via: [:get, :post]
   mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
