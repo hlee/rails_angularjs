@@ -18,6 +18,11 @@ http://ug-rails.herokuapp.com/email/index.html
 <p> demostrate how to use angularjs query rails json api</p>
 http://ug-rails.herokuapp.com/products/index.html
 
+<strong> Lazy Load Image </strong>
+
+<p>demostrate how to use lazy load image<p>
+http://ug-rails.herokuapp.com/lazy_demo
+
 ## change log
 
 06/10/2013 Monday<br/>
